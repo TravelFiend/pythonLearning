@@ -3,8 +3,8 @@ from question_model import Question
 from quiz_brain import QuizBrain
 
 theQuestions = []
-for question in question_data:
-  theQuestions.append(Question(question['text'], question['answer']))
+for question in question_data[0]['results']:
+  theQuestions.append(Question(question['question'], question['correct_answer']))
 
 quiz = QuizBrain(theQuestions)
 
