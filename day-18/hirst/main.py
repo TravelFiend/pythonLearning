@@ -16,6 +16,7 @@ import turtle
 turtle.colormode(255)
 
 tammy = Turtle()
+tammy.hideturtle()
 tammy.shape('circle')
 tammy.speed(7)
 
@@ -33,7 +34,7 @@ for p in range(0, 10):
   go_up_by += 20
   tammy.setpos(0, go_up_by)
 
-tammy.hideturtle()
+
 
 screen = Screen()
 screen.exitonclick()
