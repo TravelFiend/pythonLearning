@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+**/__pycache__/
 *.py[cod]
 
 # C extensions
@@ -7,6 +7,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.venv
+.vscode
 env/
 build/
 develop-eggs/
