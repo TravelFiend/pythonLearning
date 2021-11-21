@@ -1,4 +1,4 @@
-from turtle import Turtle, up
+from turtle import Turtle
 
 
 STARTING_POSITIONS = [(0.00, 0.00), (0.00, -20.00), (0.00, -40.00)]
@@ -25,6 +25,13 @@ class Snake:
     tom.penup()
     tom.goto(position)
     self.blocks.append(tom)
+
+  def reset(self):
+    for block in self.blocks:
+      block.goto(1000, 1000)
+    self.blocks.clear()
+    self.create_snake()
+    self.head = self.blocks[0]
 
   def extend(self):
     self.add_segment(self.blocks[-1].position())
