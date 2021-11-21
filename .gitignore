@@ -9,7 +9,7 @@
 .Python
 .venv
 .vscode
-.DS_Store
+**/.DS_Store
 env/
 build/
 develop-eggs/
