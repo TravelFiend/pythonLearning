@@ -34,12 +34,12 @@ while gameIsOn:
     scoreboard.writeScore()
 
   if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-    gameIsOn = False
-    scoreboard.gameOver()
+    scoreboard.reset()
+    snake.reset()
 
   for block in snake.blocks[1:]:
     if snake.head.distance(block) < 10:
-      gameIsOn = False
-      scoreboard.gameOver()
+      scoreboard.reset()
+      snake.reset()
 
 screen.exitonclick()
