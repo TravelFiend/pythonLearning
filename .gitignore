@@ -110,6 +110,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.csv
 .vscode
 .DS_Store
 env/
