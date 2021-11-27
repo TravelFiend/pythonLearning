@@ -111,6 +111,7 @@ celerybeat.pid
 .env
 .venv
 .vscode
+.DS_Store
 env/
 venv/
 ENV/
