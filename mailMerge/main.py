@@ -7,7 +7,6 @@
     #Hint2: This method will also help you: https://www.w3schools.com/python/ref_string_replace.asp
         #Hint3: THis method will help you: https://www.w3schools.com/python/ref_string_strip.asp
 
-theLetter = ''
 with open('mailMerge/Input/Letters/starting_letter.txt') as letterFile:
     theLetter = letterFile.read()
 
@@ -16,10 +15,5 @@ with open('mailMerge/Input/Names/invited_names.txt') as namesFile:
     for name in names:
         letterCopy = theLetter
         newLetter = letterCopy.replace('[name]', name.strip())
-        with open(f'mailMerge/Output/ReadyToSend/letter_for_{name}.txt', mode='w') as newFile:
+        with open(f'mailMerge/Output/ReadyToSend/letter_for_{name.strip()}.txt', mode='w') as newFile:
             newFile.write(newLetter)
-
-
-
-
-
