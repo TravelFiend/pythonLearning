@@ -1,6 +1,5 @@
 # # import csv
 import pandas as pd
-from pandas.core.frame import DataFrame
 
 # # with open('./day-25/weather_data.csv') as weatherFile:
 # #   data = csv.reader(weatherFile)

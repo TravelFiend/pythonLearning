@@ -20,10 +20,7 @@ while len(guessedStates) < 50:
   stateGuessed = screen.textinput(title=f'{len(guessedStates)}/50 States Guessed', prompt='Enter a state').title()
 
   if stateGuessed == 'Exit' or stateGuessed == 'End' or stateGuessed == 'Q':
-    missedStates = []
-    for state in states:
-      if state not in guessedStates:
-        missedStates.append(state)
+    missedStates = [state for state in states if state not in guessedStates]
     df = DataFrame(missedStates)
     df.to_csv('statesGame/missed_states.csv')
     break
